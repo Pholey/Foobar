@@ -9,18 +9,17 @@ open System.Net
 open System.Net.Sockets
 open System.Collections.Generic
 open System.Text.RegularExpressions
-open Foobar.Mongo
 open Foobar.IRC
 
 [<EntryPoint>]
 let main args =
     // establish a connection to the server
-    let irc_client = new TcpClient();
-    irc_client.Connect( server, port )
+    let client = new TcpClient();
+    client.Connect( server, port )
 
     // get the input and output streams
-    let reader = new StreamReader( irc_client.GetStream() )
-    let writer = new StreamWriter( irc_client.GetStream() )
-    // runBot reader writer
-    let _ = logAsync
+    let reader = new StreamReader( client.GetStream() )
+    let writer = new StreamWriter( client.GetStream() )
+    runBot reader writer
+    
     0

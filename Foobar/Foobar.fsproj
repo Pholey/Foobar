@@ -60,11 +60,13 @@
     <Reference Include="MongoDB.Driver">
       <HintPath>..\packages\MongoDB.Driver.2.0.1\lib\net45\MongoDB.Driver.dll</HintPath>
     </Reference>
+    <Reference Include="MongoDB.FSharp">
+      <HintPath>..\packages\MongoDB.FSharp.0.1.0\lib\net40\MongoDB.FSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Python.fs" />
-    <Compile Include="Mongo.fs" />
     <Compile Include="IRC.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
